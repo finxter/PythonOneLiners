@@ -1,4 +1,3 @@
-```python
 # Palindrome Python One-Liner
 phrase.find(phrase[::-1])
 
@@ -28,4 +27,4 @@ lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort
 
 # 1. Sieve of Eratosthenes Python One-liner
 reduce( (lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
-```
+
