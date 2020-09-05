@@ -1,19 +1,18 @@
-# Formatting Databases with the zip() Function
-
+# Using Generator Expressions to Find Companies That Pay Below Minimum Wage
 
 ## Data
-column_names = ['name', 'salary', 'job']
-db_rows = [('Alice', 180000, 'data scientist'),
-           ('Bob', 99000, 'mid-level manager'),
-           ('Frank', 87000, 'CEO')]
+companies = {
+    'CoolCompany' : {'Alice' : 33, 'Bob' : 28, 'Frank' : 29},
+    'CheapCompany' : {'Ann' : 4, 'Lee' : 9, 'Chrisi' : 7},
+    'SosoCompany' : {'Esther' : 38, 'Cole' : 8, 'Paris' : 18}
+    }
 
 ## One-Liner
-db = [dict(zip(column_names, row)) for row in db_rows]
+illegal = [x for x in companies if any(y<9 for y in companies[x].values())]
 
 ## Result
-print(db)
+print(illegal)
 '''
-[{'name': 'Alice', 'salary': 180000, 'job': 'data scientist'},
- {'name': 'Bob', 'salary': 99000, 'job': 'mid-level manager'},
- {'name': 'Frank', 'salary': 87000, 'job': 'CEO'}]
+['CheapCompany', 'SosoCompany']
 '''
+
