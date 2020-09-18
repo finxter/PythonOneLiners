@@ -19,6 +19,9 @@ python -m cProfile foo.py
 # Superset Python One-Liner
 lambda l: reduce(lambda z, x: z + [y + [x] for y in z], l, [[]])
 
+# Generate Random Password
+from random import choice; print(''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789%^*(-_=+)') for i in range(10)]))
+
 # Fibonacci Python One-Liner
 fib = lambda x: x if x<2 else fib(x-1) + fib(x-2)
 
