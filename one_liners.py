@@ -31,6 +31,10 @@ lambda L: [] if L==[] else qsort([x for x in L[1:] if x< L[0]]) + L[0:1] + qsort
 # Sieve of Eratosthenes Python One-liner
 reduce((lambda r,x: r-set(range(x**2,n,x)) if (x in r) else r), range(2,int(n**0.5)), set(range(2,n)))
 
+# Find all dividers of a number
+
+[divider for divider in range(1, YOUR_NUMBER) if YOUR_NUMBER % divider == 0]
+
 # General One-Liner Commands From https://gist.github.com/craigls/2712084
 '''
 Some useful Python one-liners taken from http://www.reddit.com/r/Python/comments/fofan/suggestion_for_a_python_blogger_figure_out_what/
