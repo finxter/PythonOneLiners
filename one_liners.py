@@ -7,6 +7,9 @@ a, b = b, a
 # Sum Over Every Other Value Python One-Liner
 sum(stock_prices[::2])
 
+#To input space separated integers in a list
+lis = list(map(int, input().split()))
+
 # Read File Python One-Liner
 [line.strip() for line in open(filename)]
 
