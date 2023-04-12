@@ -1,6 +1,8 @@
 # Palindrome Python One-Liner
 phrase.find(phrase[::-1])
 
+# print N numbers Python One-Liner
+print(*range(N))
 # Swap Two Variables Python One-Liner
 a, b = b, a
 
