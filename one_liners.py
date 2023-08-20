@@ -53,7 +53,7 @@ sha256 = lambda data: (type("SHAConstructor", (object, ) , {'__init__': lambda s
 print('\n'.join([''.join([('Zenoftech'[(x-y)%9 ]if ((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3<=0 else' ') for x in range(-30,30 )])for y in range(15, -15, -1)]))
 
 # Get back rot-13 version of text you enter
-(lambda , a = "abcdefghijklmnopqrstuvwxyz", b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ": "".join([a[a.index(x[i]) - 13] if x[i] in a else b[b.index(x[i]) - 13] if x[i] in b else x[i] for i in range(len(x))]))(input("Enter text: "))
+(lambda x, a = "abcdefghijklmnopqrstuvwxyz", b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ": "".join([a[a.index(x[i]) - 13] if x[i] in a else b[b.index(x[i]) - 13] if x[i] in b else x[i] for i in range(len(x))]))(input("Enter text: "))
 
 # General One-Liner Commands From https://gist.github.com/craigls/2712084
 '''
