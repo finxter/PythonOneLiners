@@ -55,6 +55,9 @@ print('\n'.join([''.join([('Zenoftech'[(x-y)%9 ]if ((x*0.05)**2+(y*0.1)**2-1)**3
 # Get back rot-13 version of text you enter
 (lambda x, a = "abcdefghijklmnopqrstuvwxyz", b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ": "".join([a[a.index(x[i]) - 13] if x[i] in a else b[b.index(x[i]) - 13] if x[i] in b else x[i] for i in range(len(x))]))(input("Enter text: "))
 
+# Replace banned words in string with a special character
+lambda text, words, char = '*': [text := text.replace(word, char * len(word)) for word in words][-1]
+
 # General One-Liner Commands From https://gist.github.com/craigls/2712084
 '''
 Some useful Python one-liners taken from http://www.reddit.com/r/Python/comments/fofan/suggestion_for_a_python_blogger_figure_out_what/
